@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  /* Custom Safety Color Palette */
+  --color-safety-emerald: #0f766e;
+  --color-safety-dark: #111827;
+  --color-safety-orange: #f97316;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #f8fafc;
+  color: #0f172a;
+  direction: rtl; /* Set default Arabic direction */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+/* Custom print styles to only show specific receipt/contract print areas */
+@media print {
+  @page {
+    size: auto;
+    margin: 0 !important; /* Strips browser-generated header, footer, and the page URL starting with ais */
+  }
+  
+  body {
+    margin: 1.6cm !important; /* Restores layout margins elegantly inside the sheet */
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hide standard body elements */
+  body, html, #root {
+    visibility: hidden !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+
+  /* Prevent ancestor clipping on print */
+  div, section, main {
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  
+  /* Select active print targets and make them visible */
+  #print-area, #print-area *,
+  #client-receipt-print-area, #client-receipt-print-area *,
+  #admin-receipt-print-area, #admin-receipt-print-area *,
+  #contract-print-area, #contract-print-area *,
+  #execution-report-print-area, #execution-report-print-area * {
+    visibility: visible !important;
+  }
+  
+  /* Reset layout for perfect full-page printing without overlay shadows/borders/colors of modals */
+  #print-area,
+  #client-receipt-print-area,
+  #admin-receipt-print-area,
+  #contract-print-area,
+  #execution-report-print-area {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    border: none !important;
+    box-shadow: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: white !important;
+    color: #1e293b !important;
+    overflow: visible !important;
+  }
+}

@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="100%" height="100%">
+  <defs>
+    <!-- Background Card Glossy Gradient -->
+    <linearGradient id="badge-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#1f2937" />
+    </linearGradient>
+
+    <!-- Outer Border Metallic Rim Gradient -->
+    <linearGradient id="badge-rim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a1a1aa" />
+      <stop offset="25%" stop-color="#ffffff" />
+      <stop offset="50%" stop-color="#3cc2e0" />
+      <stop offset="75%" stop-color="#4b5563" />
+      <stop offset="100%" stop-color="#111827" />
+    </linearGradient>
+
+    <!-- Left "S" Carbon Charcoal Gradient -->
+    <linearGradient id="left-s-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#a1a1aa" />
+      <stop offset="25%" stop-color="#3f3f46" />
+      <stop offset="75%" stop-color="#18181b" />
+      <stop offset="100%" stop-color="#09090b" />
+    </linearGradient>
+
+    <!-- Center "A" Left Side (Luminous Cyan/Teal) -->
+    <linearGradient id="center-a-left-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9" />
+      <stop offset="35%" stop-color="#22d3ee" />
+      <stop offset="70%" stop-color="#0e7490" />
+      <stop offset="100%" stop-color="#083344" />
+    </linearGradient>
+
+    <!-- Center "A" Right Side (Sleek Deep Blue-Teal Shadow) -->
+    <linearGradient id="center-a-right-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0e7490" />
+      <stop offset="40%" stop-color="#0f766e" />
+      <stop offset="75%" stop-color="#1e3a8a" />
+      <stop offset="100%" stop-color="#172554" />
+    </linearGradient>
+
+    <!-- Right "S" Polished Premium Silver Chrome Gradient -->
+    <linearGradient id="right-s-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="30%" stop-color="#cbd5e1" />
+      <stop offset="70%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#334155" />
+    </linearGradient>
+  </defs>
+
+  <!-- 1. Beautiful Rounded Hexagon Base Badge for Multi-surface Contrast Protection -->
+  <path 
+    d="M 160,18 L 270,81 A 15,15 0 0 1 278,94 L 278,226 A 15,15 0 0 1 270,239 L 160,302 A 15,15 0 0 1 145,302 L 35,239 A 15,15 0 0 1 27,226 L 27,94 A 15,15 0 0 1 35,81 L 145,18 A 15,15 0 0 1 160,18 Z" 
+    fill="url(#badge-bg)" 
+    stroke="url(#badge-rim)" 
+    stroke-width="5"
+    filter="drop-shadow(0 10px 15px rgba(0,0,0,0.5))"
+  />
+
+  <!-- 2. Stylized Letters: S A S -->
+
+  <!-- Left S (Charcoal Metallic Carbon) -->
+  <path 
+    d="M 63,95 L 118,95 L 118,140 L 88,140 L 88,165 L 118,175 L 118,245 L 63,245 L 63,200 L 93,200 L 93,175 L 63,165 Z" 
+    fill="url(#left-s-grad)" 
+  />
+
+  <!-- Center A (Dual-folded Spire with high contrast 3D lines) -->
+  <!-- Left Side Spire -->
+  <path 
+    d="M 160,85 L 130,245 L 160,245 Z M 160,120 L 146,185 L 160,185 Z M 160,210 L 142,245 L 160,245 Z" 
+    fill="url(#center-a-left-grad)" 
+    fill-rule="evenodd"
+  />
+  <!-- Right Side Spire -->
+  <path 
+    d="M 160,85 L 160,245 L 190,245 Z M 160,120 L 160,185 L 174,185 Z M 160,210 L 160,245 L 178,245 Z" 
+    fill="url(#center-a-right-grad)" 
+    fill-rule="evenodd"
+  />
+
+  <!-- Right S (Platinum Chrome Silver) -->
+  <path 
+    d="M 202,95 L 257,95 L 257,140 L 227,140 L 227,165 L 257,175 L 257,245 L 202,245 L 202,200 L 232,200 L 232,175 L 202,165 Z" 
+    fill="url(#right-s-grad)" 
+  />
+
+</svg>

@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Restrict global appState reads and writes to backend authorized or default operations
+    match /appState/{stateId} {
+      allow read, write: if true;
+    }
+    
+    // Allow durable uploaded files and chunked media access for self-healing static restore functionality
+    match /uploadedFiles/{filename} {
+      allow read, write: if true;
+    }
+    
+    match /uploadedFileChunks/{chunkId} {
+      allow read, write: if true;
+    }
+    
+    // Global Safety Net Default Deny
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

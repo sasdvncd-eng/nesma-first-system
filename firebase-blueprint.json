@@ -1,0 +1,92 @@
+{
+  "entities": {
+    "appState": {
+      "title": "Application State",
+      "description": "Entire unified persistent state of the Nesma SAS platform containing clients, technicians, visits, quotations, and administration records.",
+      "type": "object",
+      "properties": {
+        "clients": {
+          "type": "array",
+          "description": "List of system clients"
+        },
+        "technicians": {
+          "type": "array",
+          "description": "Registered technicians"
+        },
+        "visits": {
+          "type": "array",
+          "description": "Inspection and maintenance safety certificates and tasks"
+        },
+        "quotations": {
+          "type": "array",
+          "description": "Repair and spare parts pricing proposals"
+        },
+        "notificationLogs": {
+          "type": "array",
+          "description": "Dispatched communication history records"
+        },
+        "daysBeforeVisitAlert": {
+          "type": "number",
+          "description": "Threshold before automatic alert warnings"
+        },
+        "managerPhone": {
+          "type": "string",
+          "description": "Admin phone number for alerts"
+        },
+        "managerEmail": {
+          "type": "string",
+          "description": "Admin email recipient for alert notifications"
+        },
+        "adminUsername": {
+          "type": "string",
+          "description": "Admin login username"
+        },
+        "adminPassword": {
+          "type": "string",
+          "description": "Admin security access password"
+        },
+        "adminName": {
+          "type": "string",
+          "description": "Admin system display name"
+        }
+      },
+      "required": ["clients", "technicians", "visits"]
+    },
+    "uploadedFile": {
+      "title": "Uploaded File Metadata",
+      "description": "Metadata and optional base64 content of an uploaded document, contract, image or video.",
+      "type": "object",
+      "properties": {
+        "base64": { "type": "string", "description": "Full base64 encoded data (if under 900KB)" },
+        "type": { "type": "string", "description": "MIME type of the file" },
+        "uploadedAt": { "type": "string", "format": "date-time", "description": "ISO timestamp of upload" },
+        "isChunked": { "type": "boolean", "description": "True if file exceeds Firestore doc size limits and is stored in chunks" },
+        "totalChunks": { "type": "number", "description": "Total number of chunks if isChunked is true" }
+      }
+    },
+    "uploadedFileChunk": {
+      "title": "Uploaded File Chunk",
+      "description": "Segment of a large chunked file stored in Firestore.",
+      "type": "object",
+      "properties": {
+        "base64Chunk": { "type": "string", "description": "Base64 substring segment" },
+        "fileId": { "type": "string", "description": "Filename of parent uploadedFile" },
+        "chunkIndex": { "type": "number", "description": "Sequence index of the chunk" }
+      }
+    }
+  },
+  "firestore": {
+    "/appState/{stateId}": {
+      "schema": "appState",
+      "description": "Persistent root document preserving complete system memory securely."
+    },
+    "/uploadedFiles/{filename}": {
+      "schema": "uploadedFile",
+      "description": "Durable storage for uploaded media assets."
+    },
+    "/uploadedFileChunks/{chunkId}": {
+      "schema": "uploadedFileChunk",
+      "description": "Sequence segments for chunked media files."
+    }
+  }
+}

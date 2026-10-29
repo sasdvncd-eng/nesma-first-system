@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Master Drop Shadow -->
+    <filter id="icon-shadow" x="-20%" y="-20%" width="140%" height="145%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+
+    <!-- Deep Metallic Slate backplate for App Launcher Icon (Makes the logo POP on home screen) -->
+    <radialGradient id="icon-backplate" cx="50%" cy="50%" r="55%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="60%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#020617" />
+    </radialGradient>
+
+    <!-- Chrome Spotlight Ring -->
+    <radialGradient id="spot-ring" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25" />
+      <stop offset="80%" stop-color="#f8fafc" stop-opacity="0.1" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </radialGradient>
+
+    <!-- CENTER "A" GRADIENTS -->
+    <linearGradient id="ic-cyan-left" x1="0%" y1="100%" x2="70%" y2="0%">
+      <stop offset="0%" stop-color="#0f3d5f" />
+      <stop offset="45%" stop-color="#197ea3" />
+      <stop offset="85%" stop-color="#3ebfd9" />
+      <stop offset="100%" stop-color="#67e8f9" />
+    </linearGradient>
+    <linearGradient id="ic-blue-right" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#072238" />
+      <stop offset="35%" stop-color="#0b3b5c" />
+      <stop offset="70%" stop-color="#145d8a" />
+      <stop offset="100%" stop-color="#2482b5" />
+    </linearGradient>
+
+    <!-- LEFT "S" GRADIENTS -->
+    <linearGradient id="ic-dark-front" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="50%" stop-color="#334155" />
+      <stop offset="100%" stop-color="#475569" />
+    </linearGradient>
+    <linearGradient id="ic-dark-shade" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+
+    <!-- RIGHT "S" GRADIENTS -->
+    <linearGradient id="ic-silver-front" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#94a3b8" />
+      <stop offset="35%" stop-color="#cbd5e1" />
+      <stop offset="75%" stop-color="#f1f5f9" />
+      <stop offset="100%" stop-color="#ffffff" />
+    </linearGradient>
+    <linearGradient id="ic-silver-shade" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#475569" />
+      <stop offset="50%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#94a3b8" />
+    </linearGradient>
+  </defs>
+
+  <!-- High-quality squircle app icon outline -->
+  <rect width="512" height="512" rx="120" fill="url(#icon-backplate)" stroke="#334155" stroke-width="4" />
+  <rect x="12" y="12" width="488" height="488" rx="108" fill="url(#spot-ring)" opacity="0.6" />
+
+  <!-- Embedded decorative grid lines for custom "High-Tech Security" theme -->
+  <circle cx="256" cy="256" r="220" fill="none" stroke="#334155" stroke-width="1.5" opacity="0.4" />
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#1e293b" stroke-width="1" opacity="0.3" />
+
+  <!-- THE EMBLEM BEAUTIFULLY SCALED -->
+  <g filter="url(#icon-shadow)" transform="translate(256, 260) scale(0.92)">
+    
+    <!-- LEFT "S" (Lightened slightly for dark background contrast) -->
+    <path d="M -160,-240 L -60,-182 L -60,-65 L -100,-88 L -100,-115 L -160,-80 L -160,-120 L -60,-178 L -60,-225 Z" fill="url(#ic-dark-front)" />
+    <path d="M -60,-65 L -160, -8 L -160,105 L -60,47 L -60,25 L -120,60 L -120,35 L -60,-1 Z" fill="url(#ic-dark-shade)" />
+    <path d="M -160,-240 L -60,-182 L -60,-178 L -160,-236 Z" fill="#64748b" opacity="0.4" />
+    <path d="M -100,-88 L -60,-65 L -60,-61 L -100,-84 Z" fill="#334155" />
+    <path d="M -160,105 L -60,47 L -60,52 L -160,110 Z" fill="url(#ic-dark-front)" />
+
+    <!-- TOWER "A" -->
+    <path d="M -11,-272 Q -6,-282 0,-282 L 0,-15 L -11,-5 L -11, -272 Z" fill="url(#ic-cyan-left)" />
+    <path d="M 11,-272 Q 6,-282 0,-282 L 0,-15 L 11,-5 L 11, -272 Z" fill="url(#ic-blue-right)" />
+    
+    <path d="M -54,-248 L -11,-272 L -11,-15 L -54,-15 Z" fill="url(#ic-cyan-left)" />
+    <path d="M 54,-248 L 11,-272 L 11,-15 L 54,-15 Z" fill="url(#ic-blue-right)" />
+
+    <path d="M -54,-140 L 0,-140 L 0,-115 L -54,-115 Z" fill="url(#ic-cyan-left)" />
+    <path d="M 0,-140 L 54,-140 L 54,-115 L 0,-115 Z" fill="url(#ic-blue-right)" />
+    
+    <path d="M -54,-15 L -11,-15 L -11,25 L -54,0 Z" fill="url(#ic-cyan-left)" />
+    <path d="M 11,-15 L 54,-15 L 54,0 L 11,25 Z" fill="url(#ic-blue-right)" />
+
+    <!-- RIGHT "S" -->
+    <path d="M 60,-182 L 160,-240 L 160,-130 L 60,-72 L 60,-95 L 120,-130 L 120,-155 L 60,-120 L 60,-182 Z" fill="url(#ic-silver-front)" />
+    <path d="M 60,-72 L 160,-15 L 160,105 L 60,47 L 60,25 L 120,-10 L 120,-33 L 60,-68 Z" fill="url(#ic-silver-shade)" />
+    <path d="M 60,-182 L 160,-240 L 160,-236 L 60,-178 Z" fill="#ffffff" opacity="0.8" />
+    <path d="M 120,-130 L 60,-72 L 60,-68 L 120,-126 Z" fill="#cbd5e1" />
+    <path d="M 60,47 L 160,105 L 160,109 L 60,51 Z" fill="url(#ic-silver-front)" />
+
+  </g>
+</svg>

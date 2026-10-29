@@ -1,0 +1,11 @@
+{
+  "name": "Nesma First Maintenance",
+  "description": "نظام شركة نسما الأولى المتكامل لمتابعة صيانة معدات السلامة وأنظمة مكافحة الحريق. يتيح للمشرفين والشركات تتبع العقود والزيارات الدورية وإضافة التنبيهات، ويمكن الفنيين من استعراض المهام وتسجيل الأعطال والملاحظات ورفع تقارير PDF والصور والفيديو.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

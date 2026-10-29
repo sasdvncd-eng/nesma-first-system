@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nesma First Maintenance</title>
+    <meta name="description" content="نظام شركة نسما الأولى المتكامل لمتابعة صيانة معدات السلامة وأنظمة مكافحة الحريق. يتيح للمشرفين والشركات تتبع العقود والزيارات الدورية وإضافة التنبيهات، ويمكن الفنيين من استعراض المهام وتسجيل الأعطال والملاحظات ورفع تقارير PDF والصور والفيديو." />
+    <meta property="og:title" content="Nesma First Maintenance" />
+    <meta property="og:description" content="نظام شركة نسما الأولى المتكامل لمتابعة صيانة معدات السلامة وأنظمة مكافحة الحريق. يتيح للمشرفين والشركات تتبع العقود والزيارات الدورية وإضافة التنبيهات، ويمكن الفنيين من استعراض المهام وتسجيل الأعطال والملاحظات ورفع تقارير PDF والصور والفيديو." />
+    
+    <!-- Progressive Web App Meta Tags -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <!-- iOS / Apple App Clip Support -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Nesma First Maintenance" />
+    <link rel="apple-touch-icon" href="/icon.svg" />
+    
+    <!-- Service Worker Auto-Registration script -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((reg) => {
+              console.log('SAS Service Worker loaded on range:', reg.scope);
+            })
+            .catch((err) => {
+              console.error('SAS Service Worker registration failed:', err);
+            });
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
